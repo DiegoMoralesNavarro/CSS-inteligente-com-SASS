@@ -1,0 +1,48 @@
+@mixin theme ($bg, $cl, $bd){	
+	background: $bg;
+	border: $bd;
+
+	.nav-brand{
+		color: $cl;
+	}
+	.nav-list{
+		color: $cl;
+	}
+
+}
+
+@mixin theme-hover ($bghover, $clhover){
+	
+	.nav-list:hover{
+		background: $bghover;
+		color: $clhover;
+	}
+}
+
+// coloque o numero do tema  //
+
+$tema: 1;
+
+nav{
+	@if($tema == 1){
+		@include theme($theme-1-bg, $theme-1-cl, $theme-1-bd);
+		@include theme-hover($theme-1-bghover, $theme-1-clhover);
+	}
+	@else if($tema == 2){
+		@include theme($theme-2-bg, $theme-2-cl, $theme-2-bd);
+		@include theme-hover($theme-2-bghover, $theme-2-clhover);
+	}
+	@else if($tema == 3){
+		@include theme($theme-3-bg, $theme-3-cl, $theme-3-bd);
+		@include theme-hover($theme-3-bghover, $theme-3-clhover);
+	}
+	
+}
+
+
+
+%component{
+	text-decoration: none;
+	text-align: center;
+	font-family: Lato, Helvetica, sans-serif;
+}

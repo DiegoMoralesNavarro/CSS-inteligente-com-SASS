@@ -1,0 +1,33 @@
+
+
+nav{
+	width: 1000px;
+	height: 100px;
+	position: absolute;
+	align-items: center;
+	display: flex;
+	overflow: hidden;
+
+	.nav-brand{
+		padding: 0 30px;
+		font-size: 3.5rem;
+		@extend %component;
+	}
+
+	ul {
+		list-style: none;
+		position: relative;
+    	left: 20%;
+
+		li{
+			display: inline-block;
+
+			.nav-list{
+				font-size: 1.8rem;
+				padding: 20px;
+				text-transform: uppercase;
+				@extend %component;
+			}
+		}
+	}
+}
